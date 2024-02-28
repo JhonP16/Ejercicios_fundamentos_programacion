@@ -18,7 +18,7 @@ dinero = int(input("Ingrese la cantidad de dinero entre 1000 y 5.000.000"))
 ### PROCESAMIENTO
 
 if dinero >= 1000 and dinero <=5000000:
-  if dinero >=10000:
+  if dinero >=100000:
     billetes_100 = dinero//100000
     dinero = dinero % 100000
   if dinero >= 50000:
