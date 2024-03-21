@@ -15,19 +15,22 @@ def mediana(numeros):
     elif len(numeros) % 2 == 0:
         for index in range(0, len(numeros), 1):
             if len(numeros) == 2:
-                mediana = (numeros[index - 1] + numeros[index]) / 2
+                mediana = (numeros[0] + numeros[1]) / 2
+                mediana = round(mediana)
                 return mediana
             else:
                 numeros.pop(-1)
                 numeros.pop(0)
     
-### PROCESAMIENTO ###
-cantidad_numeros = int(input("Ingrese la cantidad de números: "))
+### PROGRAMA PRINCIPAL ###
 lista_numeros = []
 
-for i in range(0, cantidad_numeros, 1):
+while True:
     numero = int(input("Ingrese el número: "))
-    lista_numeros.append(numero)
+    if numero == -1:
+        break
+    else:
+        lista_numeros.append(numero)
 
 print("La mediana es ", mediana(lista_numeros))
 
